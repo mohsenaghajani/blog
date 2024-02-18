@@ -1,0 +1,39 @@
+body{
+    background-color: white;
+}
+
+#all-post {
+    margin: 5rem auto;
+    width: 90%;
+    max-width: 60rem;
+}
+
+#all-post h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #5a93f8;
+    margin: 3rem 0;
+}
+
+#all-post ul {
+    list-style: none;
+}
+
+
+.post a {
+    height: 10rem;
+    width: 50%;
+    transform-origin: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
+    background-color: white;
+    border-radius: 30px;
+    margin: 20px 0;
+}
+.post img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.post {
+    margin: 10px 0 ;
+}
