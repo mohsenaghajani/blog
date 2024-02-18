@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+	<header id="main_navigation">
+        <h1><a href="">mohsen blog</a></h1>
+        <nav>
+            <a href="">all post</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="auther of page is mohsen">
+            <h2>mohsen blog </h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quidem?</p>
+    </section>
+
+    <section id="latest_post">
+        <h2> latest post</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="learning django">
+                        <div class="post_content">
+                            <h3>learning django</h3>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+
+    </section>
+
+    <section id="about">
+        <h3>what i do ?</h3>
+        <p>
+            i am learning django and html css
+        </p>
+
+    </section>
+{% endblock %}
