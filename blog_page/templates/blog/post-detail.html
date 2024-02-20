@@ -12,39 +12,20 @@
 
 {% block content %}
 	<section id="post-detail">
-        <h2>post detail</h2>
+
+        <h2>{{ post.title | title }}</h2>
         <article>
-            <img src="{% static 'images/download (2).jpg' %}" alt="">
-            <address> mohsen aghajani</address>
+            <img src="{{ post.image.url }}" alt="">
+            <address> {{ post.auther }}</address>
             <div>
                 last updated
-                <time>july 15th</time>
+                <time>{{ post.modified_time| date }}</time>
             </div>
 
         </article>
     </section>
 
     <main>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis distinctio dolorem exercitationem illo odit.
-        </p>
+        {{ post.description | linebreaks }}
     </main>
 {% endblock %}

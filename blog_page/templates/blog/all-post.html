@@ -14,10 +14,10 @@
     <section id="all-post">
     <h3> all post </h3>
     <ul>
-        {% include 'includes/post.html' %}
-        {% include 'includes/post.html' %}
-        {% include 'includes/post.html' %}
-        {% include 'includes/post.html' %}
+        {% for post in posts %}
+        	{% include 'includes/post.html' %}
+        {% endfor %}
+
     </ul>
 
     </section>

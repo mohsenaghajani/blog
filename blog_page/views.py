@@ -12,8 +12,17 @@ def index(request):
 
 
 def post(request):
-    return render(request, 'blog/all-post.html')
+    posts = Post.objects.order_by('create_time').all()
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/all-post.html', context)
 
 
-def post_detail(request, slug):
-    return render(request, 'blog/post-detail.html')
+def post_detail(request, pk):
+    post = Post.objects.get(pk=pk)
+    context = {
+        'post': post
+    }
+
+    return render(request, 'blog/post-detail.html', context)
